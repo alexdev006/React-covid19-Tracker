@@ -22,7 +22,6 @@ export default class App extends Component {
         const fetchedData = await fetchData(country)
         this.setState ( { data : fetchedData, country: country })
 
-        console.log(fetchedData)
     }
 
     render() {
@@ -30,7 +29,7 @@ export default class App extends Component {
 
         return (
         <div className={styles.container}>
-            <Typography variant="h1" color="alert">Covid-19</Typography>
+            <Typography variant="h1" color="primary">Covid-19</Typography>
             {/* <img src={coronaBg} className={styles.image} alt='healthBg'/>     */}
            <Cards data= { data }/>
            <CountryPicker handleCountryChange={this.handleCountryChange}/>
